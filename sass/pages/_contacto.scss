@@ -1,0 +1,142 @@
+
+.main {
+    margin-bottom: 2em;
+
+    &__grid-container {
+    
+        & > .column {
+            margin-block: 2em;
+    
+        }
+    }
+
+    &__section {
+        margin-bottom: 2em;
+        padding: 1.5em;
+        
+
+        @media all and (min-width: 992px) {
+            & {
+                margin-inline: auto;
+                max-width: 80%;
+                padding: 2em;
+            }
+        }
+
+
+   
+        &__text-container {
+            display: flex;
+            flex-flow: column;
+            gap: .5rem;
+        }
+
+    }
+
+    &__title {
+        margin-bottom: 0.5em;
+    }
+
+    @media all and (min-width: 992px) {
+
+        &__grid-container {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(2, 50%);
+        }
+
+    }
+}
+
+
+
+/***********************************
+    FORMULARIO
+***********************************/
+
+.main__form {
+    margin-block: 2em;
+
+    &__title {
+        margin-block: .75rem;
+    }
+
+    &__input-container {
+        display: flex;
+        flex-flow: column;
+        margin-bottom: .25rem;
+        padding-block: .5rem;
+        position: relative;
+        width: 100%;
+    }
+
+    &__input-container:nth-child(5) {
+        margin-bottom: 0;
+    }   
+
+    &__label {
+        left: .5rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: all 0.25s ease-in-out;
+    }
+
+    &__label[for="message"] {
+        top: 25%;
+    }
+ 
+    &__input {
+        border-radius:4px;            
+        border:2px solid #aaa;
+        margin-block: .25rem;
+        outline:none;
+        padding:.5rem; 
+        transition:.3s;
+    }
+              
+    &__input:focus{
+        border-color:dodgerBlue;
+        box-shadow:0 0 5px 0 dodgerBlue;
+    }
+
+    &__input:focus ~ &__label, 
+    &__input:valid ~ &__label{
+        font-size: .85rem;
+        padding: 0;
+        top: 0;
+    }
+
+    &__button {
+        background-color: $accent-clr;
+        color: $tercerary-clr;
+    }
+    
+    @media all and (min-width: 750px) {
+        & {
+            display: flex;
+            flex-flow: row wrap;
+            gap: .1rem;
+            margin-block-start: 1em;
+        }
+
+
+        &__input-container {
+            max-width: 80%;
+        }
+
+        &__input-container:nth-of-type(1),
+        &__input-container:nth-of-type(2)
+        {
+            max-width: 40%;
+        }
+        
+        &__title {
+            width: 100%;
+        }
+    } 
+    
+}    
+    
+
+
