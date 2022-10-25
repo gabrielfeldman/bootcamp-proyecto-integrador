@@ -80,6 +80,7 @@
     display: flex;
     justify-content: space-between;
     order: -1;
+    
 
     @media (max-width: 768px) {
         & {
@@ -89,7 +90,7 @@
 
     &__logo-container,
     &__form-container {
-        padding: 1em;
+        padding: .5em;
     }
 
     &__logo-container {
@@ -115,6 +116,7 @@
 
     &__form-label {
         visibility:collapse;
+        width: 1%;
     }
 
     &__form-search {
@@ -127,12 +129,21 @@
     }
 
     &__form-submit {
+        min-width: 50px;
+        padding: 4px;
         background-color: $accent-clr;
         border-radius: 0 4px 4px 0;
-        color: $tercerary-clr;
-        cursor: pointer;
-        font-weight: 600;
-        padding: 4px;
+        background-image: url(../img/icons/magnifying-glass.svg);
+        background-size: 40%;  
+    }
+
+    &__form-submit,
+    &__carrito-container {
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        text-indent: -9999px;
+        cursor: pointer;        
     }
 
     &__form-search:focus,
@@ -141,12 +152,31 @@
     }
 
     &__carrito-container {
-        align-items: center;
-        color: $tercerary-clr;
-        display: flex;
-        flex: 0 0 2em;
-        font-size: 25px;
-        justify-content: center;
+        flex: 0 0 3em;
+        padding: 8px;
+        background-image: url(../img/icons/cart-shopping.svg);
+        background-size: 95%;
+        position:relative;
+
+        &__sum {
+            text-indent: initial;
+            width: 20px;
+            text-align: left;
+            padding: 0 4px;
+            /*background-color: rgb(237, 119, 0);
+            color: $tercerary-clr;*/
+            background-color: $tercerary-clr;
+            color: $accent-clr;
+            font-size: 10px;
+            font-weight: 900;
+            position: absolute;
+            top: 40%;
+            left: 0;
+            transform: translate(100%, -50%);
+        }
+
+
+
     }
     
 }

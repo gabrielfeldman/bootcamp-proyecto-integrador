@@ -30,18 +30,38 @@ button {
 }
 
 button {
+  font-size: .8rem;
   font-weight: 700;
   text-transform: uppercase;
-  max-width: 150px;
-  padding: 1em 2em;
+  min-width: min-content;
+  max-width: 100px;
+  padding: .75em 1em;
   border-radius: 4px;
+
+  &:hover {
+    cursor: pointer;
+    filter: brightness(125%);
+  }
+
+  &:disabled {
+    filter:opacity(30%);
+    cursor: initial;
+  }
 }
 
-button:hover {
-  cursor: pointer;
-  filter: brightness(85%);
-}
+form input {
+  border-radius:4px;            
+  border:2px solid #aaa;
+  margin-block: .25rem;
+  outline:none;
+  padding:.5rem; 
 
+  &:focus {
+      border-color:dodgerBlue;
+      box-shadow:0 0 5px 0 dodgerBlue;
+  }
+
+}
 
 img,
 iframe {

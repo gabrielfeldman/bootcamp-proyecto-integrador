@@ -1,0 +1,153 @@
+.container-alta {
+    padding: 1rem;
+
+    form {
+        margin-block: 1.5em;
+    }
+
+    div, input {
+        display: block;
+        margin-bottom: 1px;
+        padding: 5px;
+    }
+         
+    input {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    form button {
+        display: block;
+        background-color: $accent-clr;
+        color: $tercerary-clr;
+        margin-block: 1rem;
+    }
+
+
+    input[type="checkbox"] {
+        display: inline;
+        width: 15px;
+        height: 15px;
+        margin-top: 10px;
+    }
+
+    form div {
+        max-width: 300px;
+        color: #d8301d;
+        font-weight: 700;
+        font-size: .9rem;
+        margin: 2px 0 .5rem 0;
+        display: none;
+
+        &::before {
+            font-family: "Font Awesome 5 Free"; 
+            font-weight: 900; 
+            content: "\f06a";
+            display: inline-block;
+            margin-right: 4px;
+
+        }
+
+    }
+
+    @media all and (min-width: 810px) {
+        &::before {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 100vh;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(25%);
+        background-image: url(../../img/bg/product-survey-bg.png);
+        background-repeat: no-repeat;
+        background-size: 95%;
+        z-index: -1;
+        }
+
+    }
+
+
+    /************************/
+    /* LISTADO DE PRODUCTOS */
+    /***********************/
+
+    #litado-productos {
+        width: 100%; 
+    }
+
+    table {  
+        table-layout: fixed;    
+        width: 100%;
+        margin-block: 1em;
+        font-size: .8rem;
+        border-collapse: collapse;
+        border-radius: 4px;
+        overflow: hidden;
+        font-size: .8rem;
+
+        tr:nth-child(1) {
+            border-bottom: 2px solid rgb(238,120,0);
+        }
+                       
+        tr:nth-child(even){
+        backdrop-filter: brightness(90%);
+        }
+
+    
+
+        th, td {
+            border-collapse: collapse;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: center;
+            padding-block: 6px;
+        }  
+
+        button {
+        width: 90%;
+        max-width: 25px;
+        aspect-ratio: 1 / 1;
+        padding: 8px;
+        text-transform: capitalize;
+        text-indent: -999px; 
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 50%;
+        }
+
+        button:disabled {
+            cursor: initial;
+        }
+
+        button[onclick*="borrarProducto"] {
+            background-color: #d8301d;
+            background-image: url(../../img/icons/trash-solid.svg);
+        }
+
+        button[onclick*="actualizarProducto"] {
+            background-color: dodgerblue;
+            background-image: url(../../img/icons/pen-to-square-solid.svg);
+        }
+
+        img {
+            max-width: 80px;
+            aspect-ratio: 2 / 1;
+        }
+
+        @media all and (min-width: 768px) {
+            font-size: 1rem;
+
+            th:last-child {
+                width: 65px;
+            }
+
+        }
+
+
+    }
+
+}

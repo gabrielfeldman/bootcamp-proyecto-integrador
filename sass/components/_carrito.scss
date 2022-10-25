@@ -1,0 +1,143 @@
+/********************/
+/* SECTION CARRITO */
+/******************/
+
+.section-carrito {
+    display: none;
+    position: fixed;
+    background-color: $tercerary-clr;
+    z-index: 1;
+    top: 60px;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    
+    @media all and (min-width: 769px) {
+        max-width: 55%;
+        top: 95px;
+    }
+ 
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        transform: translateX(-100%);
+        background-color: $tercerary-clr;
+        opacity: 0.5;
+
+    }
+
+    
+
+    &--visible {
+        display: block;
+    }
+
+    /***********************/
+    /* TABLA DE PRODUCTOS */                 
+    /*********************/
+
+    &__table {
+        table-layout: fixed;        
+        width: 100%;
+        margin-block: 1em;
+        font-size: .8rem;
+        border-collapse: collapse;
+        border-radius: 4px;
+        overflow: hidden;
+        
+        @media all and (min-width: 768px) {
+            font-size: .9rem;
+        }
+
+    
+        & td,
+        & th {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            text-align: center;
+            padding-block: 6px;
+        }
+
+        & td > img {
+            max-width: 48px;
+            aspect-ratio: 2 / 1;
+        }        
+
+        &__title {
+            background-color: rgb(238,120,0);    
+        }
+
+        
+
+        & tr:nth-child(even) {
+            backdrop-filter: brightness(90%);
+        }
+    }
+
+    &__button,
+    .btn__enviarCarrito {
+        text-transform: capitalize;
+    }
+
+    .btn__enviarCarrito {
+        background-color: #35b874;
+        padding: 4px 8px;
+    }
+
+    &__button {
+        width: 80%;
+        background-color: #d8301d;
+        padding: 4px;
+    
+    }
+
+    &__placeholder-title,
+    &__placeholder-subtitle {
+        font-weight: 300;
+        text-align: center;
+    }
+
+    &__placeholder-title {
+        color:rgb(102, 102, 102);
+        margin-top: 2em;
+    }
+
+    &__placeholder-subtitle {
+        color: rgb(153, 153, 153);
+        font-size: 1.25rem;
+    }
+
+    /******************************/
+    /* BOTÓN PARA CERRAR CARRITO */
+    /*****************************/
+
+    & > .btn--close {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 30px;
+        aspect-ratio: 1/1;
+        padding: 0px;
+        
+        &:hover {
+            filter: brightness(1);
+        }
+
+
+        & > img {
+            width: 100%;
+        }
+    }
+
+}

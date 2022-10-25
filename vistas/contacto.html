@@ -1,0 +1,44 @@
+<section class="main__section">
+    <h1 class="main__title">Contacto</h1>
+    <div class="main__grid-container">
+        <div class="column">
+            <div class="main__map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3048.083278640596!2d-4.460349085383955!3d40.18496007762794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4035b57551b6f3%3A0x84be095154d712f6!2sC.%20Falsa%2C%2045908%20Aldea%20en%20Cabo%2C%20Toledo%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sar!4v1660733597407!5m2!1ses!2sar"
+                    width="600" height="550" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        <div class="column">
+            <div class="main__section__text-container">
+                <p class="strong">Yunga</p>
+                <p>Calle Falsa, 123 - CP1429 Ciudad de Buenos Aires</p>
+                <a href="mailto:yunga@yunga.ar"> yunga@yunga.ar</a>
+                <a href="index.html">yunga.ar</a>
+            </div>
+            <form class="main__form" action="POST">
+                <p class="main__form__title strong">Formulario de contacto</p>
+                <div class="main__form__input-container">
+                    <input class="main__form__input" type="text" name="name" id="name" required>
+                    <label class="main__form__label label--required" for="name">Nombre</label>
+                </div>
+                <div class="main__form__input-container">
+                    <input class="main__form__input" type="text" name="surname" id="surname" required>
+                    <label class="main__form__label label--required" for="surname">Apellido</label>
+                </div>
+                <div class="main__form__input-container">
+                    <input class="main__form__input" type="email" name="mail" id="mail" required>
+                    <label class="main__form__label label--required" for="mail">Mail</label>
+                </div>
+                <div class="main__form__input-container">
+                    <textarea class="main__form__input" name="message" id="message" rows="5" required>
+                        </textarea>
+                    <label class="main__form__label" for="message">Escribinos tu mensaje</label>
+                </div>
+                <div class="main__form__input-container">
+                    <button class="main__form__button" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
