@@ -60,7 +60,7 @@
         right: 0;
         top: 0;
         transform: translateY(25%);
-        background-image: url(../../img/bg/product-survey-bg.png);
+        background-image: url(../img/bg/product-survey-bg.png);
         background-repeat: no-repeat;
         background-size: 95%;
         z-index: -1;
@@ -125,12 +125,12 @@
 
         button[onclick*="borrarProducto"] {
             background-color: #d8301d;
-            background-image: url(../../img/icons/trash-solid.svg);
+            background-image: url(../img/icons/trash-solid.svg);
         }
 
         button[onclick*="actualizarProducto"] {
             background-color: dodgerblue;
-            background-image: url(../../img/icons/pen-to-square-solid.svg);
+            background-image: url(../img/icons/pen-to-square-solid.svg);
         }
 
         img {
