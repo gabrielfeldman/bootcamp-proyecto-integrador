@@ -621,7 +621,7 @@ body {
   transform: scale(1.02);
   transform: scaleX(10deg);
   transform-origin: bottom;
-  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.01);
+  box-shadow: 0 7px 8px rgba(0, 0, 0, 0.2), 0 3px 3px rgba(0, 0, 0, 0.1);
 }
 .card__image-container {
   height: 200px;
