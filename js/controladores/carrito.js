@@ -62,11 +62,14 @@ class CarritoController extends CarritoModel {
         try { 
             const elemSectionCarrito = document.getElementsByClassName('section-carrito')[0];
             
-            elemSectionCarrito.innerHTML = '<h2>Enviando carrito...</h2>';
+            elemSectionCarrito.innerHTML = '<h2 class="section-carrito__placeholder-title">Enviando carrito...</h2>';
             await carritoService.guardarCarritoServicio(this.carrito);
             this.carrito = [];
             localStorage.setItem('carrito', JSON.stringify(this.carrito));
-            elemSectionCarrito.innerHTML = `<h2>Enviando carrito <b>Ok!</b></h2>`;
+            elemSectionCarrito.innerHTML = `
+            <h2 class="section-carrito__placeholder-title">Tu compra fue realizada con éxito</h2>
+            <div class="section-carrito__submit-confirmation-img-container"></div>
+            `;
             this.closeBtnCarrito(elemSectionCarrito);
             
           
