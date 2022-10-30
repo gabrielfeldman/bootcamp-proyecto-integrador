@@ -698,6 +698,9 @@ body {
   /******************************/
   /* BOTÓN PARA CERRAR CARRITO */
   /*****************************/
+  /******************************/
+  /* COMPRAR CARRITO            */
+  /*****************************/
 }
 @media all and (min-width: 769px) {
   .section-carrito {
@@ -794,6 +797,15 @@ body {
 .section-carrito > .btn--close > img {
   width: 100%;
 }
+.section-carrito__submit-confirmation-img-container {
+  margin: 1em auto;
+  width: 50%;
+  aspect-ratio: 1/1;
+  background-image: url(../img/bg/e_shop_commerce_icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
 .container-alta {
   padding: 1rem;
@@ -850,7 +862,7 @@ body {
     right: 0;
     top: 0;
     transform: translateY(25%);
-    background-image: url(../img/bg/product-survey-bg.png);
+    background-image: url(../img/bg/e_commerce_shopping_shop_online_icon.svg);
     background-repeat: no-repeat;
     background-size: 95%;
     z-index: -1;
