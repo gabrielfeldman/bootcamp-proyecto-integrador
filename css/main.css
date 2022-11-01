@@ -641,7 +641,7 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .hub-box__container--tecnologia {
   background-image: url(../img/bg/codigo-unsplash.jpg);
@@ -652,15 +652,12 @@ body {
 }
 .hub-box__content {
   max-width: 450px;
-  min-height: 145px;
-  padding: 1em;
+  padding: 1.25rem;
   font-weight: 300;
   color: rgb(102, 102, 102);
   font-size: 1.5rem;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 4px;
-  display: grid;
-  place-items: center;
 }
 
 .card {
