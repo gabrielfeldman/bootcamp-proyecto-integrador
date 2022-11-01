@@ -993,4 +993,13 @@ body {
   .container-alta table th:last-child {
     width: 65px;
   }
+}
+
+.active {
+  font-weight: 900;
+  color: #fff;
+}
+
+.nav-bar__nav-link:not(.active) {
+  color: rgba(241, 241, 241, 0.8);
 }/*# sourceMappingURL=main.css.map */
