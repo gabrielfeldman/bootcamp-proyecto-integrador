@@ -72,7 +72,7 @@ class CarritoController extends CarritoModel {
             `;
             this.closeBtnCarrito(elemSectionCarrito);
             
-          
+            this.resetearCuentaProductosCarrito(this.carrito)     
             
         } catch (error) {
             console.error(error);
@@ -113,6 +113,13 @@ class CarritoController extends CarritoModel {
         carritoContainer.appendChild(carritoSum);
         
   
+    }
+
+    resetearCuentaProductosCarrito(carrito) {
+        const carritoContainer = document.querySelector('.search-bar__carrito-container');
+        const carritoSum = carritoContainer.querySelector('.search-bar__carrito-container__sum');        
+        carritoSum.innerHTML = carrito.length;
+        carritoContainer.appendChild(carritoSum);
     }
 
 
