@@ -1,26 +1,65 @@
-.company,
+.about,
 .team {
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em;
+    margin-bottom: 2em;
     padding-block: 1em;
-    text-align: center;
+    box-shadow: 0 0 1px 1px rgba(0,0,0,.05),0 1px 2px 0 rgba(0,0,0,.15);
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: rgb(241, 241, 241, 0.3);
 
+    p {
+        margin-bottom: 4px;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+     
     @media all and (min-width: 768px) {
 
-        & {             
-            align-items: initial;  
-            text-align: initial;
+        
+        & > * {
+            margin-bottom: .5rem;
         }
-    }
+        
 
-    & > * {
-        margin-bottom: .5rem;
-    }
+}
+}
+
+.about {
+@media all and (min-width: 768px) {
+
+        & {             
+            flex-direction: row;
+            gap: 1rem;
+        }
+
+        &__img {
+            flex: 0 0 400px;
+            aspect-ratio: 1 / 1;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            
+
+            &--tecnologia {
+                background-image: url(../img/bg/web_development_coding_programming_binary_icon.svg);
+            }
+
+            &--seguridad {
+                background-image: url(../img/bg/security_protection_shield_safety_woman_icon.svg);
+            }
+        }
+}
 }
 
 .team {
+
+    & {
+        align-items: initial;  
+    }
+
      & > * {
         margin-bottom: .5rem;
     }
@@ -28,18 +67,18 @@
     &__img__container,
     &__img { 
         aspect-ratio: 1 /1;
-        border-radius: 4px;
+        border-radius: 32px;
         max-width: 250px;  
     }
 
     &__img__container {
         flex: 0 0 250px;
-        margin-block: 1rem;
+        margin: 1rem auto;
         overflow: hidden;
     }
 
     &__img {
-        border: 4px solid $accent-clr;
+        border: 4px solid $secondary-clr;
     }
   
   
@@ -59,7 +98,7 @@
     }
 
     &__social__link{
-        color: $secondary-clr;
+        color: $accent-clr;
     }
 
     @media all and (min-width: 768px) {
@@ -89,4 +128,43 @@
         }
 }
 
+.hub-box {
+    &__container {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100%;
+        padding-block: .25em;
+        margin-bottom: 2em;
+        border-radius: 4px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 1rem;
 
+        &--tecnologia {
+            background-image: url(../img/bg/codigo-unsplash.jpg);
+           
+        }
+
+        &--seguridad {
+            background-image: url(../img/bg/thisisengineering-unsplash.jpg);
+            background-position: left;
+        }
+
+    }
+
+
+    &__content {
+        max-width: 450px;
+        min-height: 145px;
+        padding: 1em;
+        font-weight: 300;
+        color:rgb(102, 102, 102);
+        font-size: 1.5rem;
+        background-color: rgb(255, 255, 255, 0.95);
+        border-radius: 4px;
+        display: grid;
+        place-items: center;
+    }
+}

@@ -525,42 +525,69 @@ body {
   }
 }
 
-.company,
+.about,
 .team {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   padding-block: 1em;
-  text-align: center;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  border-radius: 4px;
+  background-color: rgba(241, 241, 241, 0.3);
+}
+.about p,
+.team p {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 @media all and (min-width: 768px) {
-  .company,
-.team {
-    align-items: initial;
-    text-align: initial;
+  .about > *,
+.team > * {
+    margin-bottom: 0.5rem;
   }
 }
-.company > *,
-.team > * {
-  margin-bottom: 0.5rem;
+
+@media all and (min-width: 768px) {
+  .about {
+    flex-direction: row;
+    gap: 1rem;
+  }
+  .about__img {
+    flex: 0 0 400px;
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .about__img--tecnologia {
+    background-image: url(../img/bg/web_development_coding_programming_binary_icon.svg);
+  }
+  .about__img--seguridad {
+    background-image: url(../img/bg/security_protection_shield_safety_woman_icon.svg);
+  }
 }
 
+.team {
+  align-items: initial;
+}
 .team > * {
   margin-bottom: 0.5rem;
 }
 .team__img__container, .team__img {
   aspect-ratio: 1/1;
-  border-radius: 4px;
+  border-radius: 32px;
   max-width: 250px;
 }
 .team__img__container {
   flex: 0 0 250px;
-  margin-block: 1rem;
+  margin: 1rem auto;
   overflow: hidden;
 }
 .team__img {
-  border: 4px solid #E0004B;
+  border: 4px solid #004E98;
 }
 .team__content {
   align-items: center;
@@ -576,7 +603,7 @@ body {
   list-style-type: none;
 }
 .team__social__link {
-  color: #004E98;
+  color: #E0004B;
 }
 @media all and (min-width: 768px) {
   .team {
@@ -597,6 +624,39 @@ body {
   .team__img__container {
     margin-block: 0;
   }
+}
+
+.hub-box__container {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100%;
+  padding-block: 0.25em;
+  margin-bottom: 2em;
+  border-radius: 4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+}
+.hub-box__container--tecnologia {
+  background-image: url(../img/bg/codigo-unsplash.jpg);
+}
+.hub-box__container--seguridad {
+  background-image: url(../img/bg/thisisengineering-unsplash.jpg);
+  background-position: left;
+}
+.hub-box__content {
+  max-width: 450px;
+  min-height: 145px;
+  padding: 1em;
+  font-weight: 300;
+  color: rgb(102, 102, 102);
+  font-size: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 4px;
+  display: grid;
+  place-items: center;
 }
 
 .card {
