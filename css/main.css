@@ -851,12 +851,15 @@ body {
   width: 30px;
   aspect-ratio: 1/1;
   padding: 0px;
+  text-indent: -9999px;
+  font-size: 1px;
+  background-image: url(../img/icons/rectangle-xmark-regular.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .section-carrito > .btn--close:hover {
   filter: brightness(1);
-}
-.section-carrito > .btn--close > img {
-  width: 100%;
 }
 .section-carrito__submit-confirmation-img-container {
   margin: 1em auto;
