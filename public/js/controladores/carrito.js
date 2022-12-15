@@ -27,10 +27,12 @@ class CarritoController extends CarritoModel {
     agregarAlCarrito(producto) {
         //console.log(producto)
 
+ 
+
+
         if(!this.elProductoEstaEnElCarrito(producto)) {
             producto.cantidad = 1
             this.carrito.push(producto);
-           
         } else {
             const productoDeCarrito = this.obtenerProductoDeCarrito(producto)
             productoDeCarrito.cantidad++;
@@ -41,6 +43,8 @@ class CarritoController extends CarritoModel {
         this.contarProductosCarrito()
         
     }
+
+
 
 
     async borrarProductoCarrito(id) {
@@ -63,16 +67,24 @@ class CarritoController extends CarritoModel {
             const elemSectionCarrito = document.getElementsByClassName('section-carrito')[0];
             
             elemSectionCarrito.innerHTML = '<h2 class="section-carrito__placeholder-title">Enviando carrito...</h2>';
-            await carritoService.guardarCarritoServicio(this.carrito);
+            const preference = await carritoService.guardarCarritoServicio(this.carrito)
             this.carrito = [];
-            localStorage.setItem('carrito', JSON.stringify(this.carrito));
-            elemSectionCarrito.innerHTML = `
-            <h2 class="section-carrito__placeholder-title">Tu compra fue realizada con éxito</h2>
-            <div class="section-carrito__submit-confirmation-img-container"></div>
-            `;
-            this.closeBtnCarrito(elemSectionCarrito);
+            localStorage.setItem('carrito', JSON.stringify(this.carrito));          
+            /*elemSectionCarrito.innerHTML = `<h2 class="section-carrito__placeholder-title">Tu compra fue realizada con éxito</h2>
+            <div class="section-carrito__submit-confirmation-img-container"></div>`;*/
+            elemSectionCarrito.innerHTML = '<h2>Redirigir a medio de pago</h2>'
+
+            setTimeout( async () => {
+                elemSectionCarrito.classList.remove('section-carrito--visible')
+                /* mostraCarrito = false */
+                console.log(preference)
+                await renderPago(preference)
+            }, 0)
+
+            this.closeBtnCarrito(elemSectionCarrito); 
             
-            this.resetearCuentaProductosCarrito(this.carrito)     
+            this.resetearCuentaProductosCarrito(this.carrito);      
+            
             
         } catch (error) {
             console.error(error);
@@ -85,9 +97,10 @@ class CarritoController extends CarritoModel {
     closeBtnCarrito(elemSectionCarrito) {
         const btn = document.createElement('button');
         btn.classList.add('btn--close');
+        //btn.innerHTML =  `<img src="img/icons/rectangle-xmark-regular.svg" alt="Close">`
         btn.textContent =  `Cerrar carrito`
         elemSectionCarrito.appendChild(btn);
-    
+            
         btn.addEventListener('click', () => {
             elemSectionCarrito.classList.remove('section-carrito--visible');
             mostrarCarrito = false;
@@ -114,6 +127,8 @@ class CarritoController extends CarritoModel {
         
   
     }
+
+
 
     resetearCuentaProductosCarrito(carrito) {
         const carritoContainer = document.querySelector('.search-bar__carrito-container');
