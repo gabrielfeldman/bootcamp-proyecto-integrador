@@ -715,8 +715,18 @@ body {
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  border-bottom: 2px solid #E0004B;
   margin-bottom: 0.5rem;
+}
+.card__heading::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 1rem;
+  border-radius: 40px;
+  background-color: #E0004B;
+  position: absolute;
+  top: 100%;
+  left: 0;
 }
 .card__cart-button {
   width: 40px;
