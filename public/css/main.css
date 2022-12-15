@@ -881,6 +881,10 @@ body {
 }
 
 .container-alta {
+  padding: 1rem;
+  /************************/
+  /*      DROP AREA       */
+  /***********************/
   /************************/
   /* LISTADO DE PRODUCTOS */
   /***********************/
@@ -909,7 +913,7 @@ body {
   height: 15px;
   margin-top: 10px;
 }
-.container-alta form div {
+.container-alta form .mensaje-validacion {
   max-width: 300px;
   color: #d8301d;
   font-weight: 700;
@@ -917,7 +921,7 @@ body {
   margin: 2px 0 0.5rem 0;
   display: none;
 }
-.container-alta form div::before {
+.container-alta form .mensaje-validacion::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f06a";
@@ -939,6 +943,33 @@ body {
     background-size: 95%;
     z-index: -1;
   }
+}
+.container-alta #drop-area {
+  border: 2px dashed #777;
+  border-radius: 20px;
+  width: 300px;
+  margin: 25px 0;
+  padding: 20px;
+}
+.container-alta .button {
+  display: inline-block;
+  padding: 10px;
+  background-color: #777;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.container-alta #foto {
+  display: none;
+}
+.container-alta #gallery img {
+  width: 100px;
+  margin-top: 10px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.container-alta #drop-area.highlight {
+  border-color: purple;
 }
 .container-alta #litado-productos {
   width: 100%;
