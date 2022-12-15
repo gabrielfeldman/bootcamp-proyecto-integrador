@@ -64,10 +64,21 @@
 
     &__heading {
         max-width: fit-content;
-        border-bottom: 2px solid $accent-clr;
         margin-bottom: .5rem;
     }
 
+    &__heading::after {
+        content: '';
+        display: block;
+        height: 4px;
+        width: 1rem;
+        border-radius: 40px;
+        background-color: $accent-clr;
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+    }
 
     &__cart-button {
         width: 40px;
