@@ -1,0 +1,24 @@
+[
+	{
+		"nombre": "Producto 1",
+		"precio": "123",
+		"stock": "3",
+		"marca": "Marca 1",
+		"categoria": "Categoria 1",
+		"detalles": "Detalles 1",
+		"foto": "foto1.jpg",
+		"envio": "true",
+		"id": 1
+	},
+	{
+		"nombre": "Producto 3",
+		"precio": "123",
+		"stock": "3",
+		"marca": "Marca 3",
+		"categoria": "Categoria 3",
+		"detalles": "Detalles 3",
+		"foto": "foto3.jpg",
+		"envio": "true",
+		"id": 3
+	}
+]
