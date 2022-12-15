@@ -1,5 +1,5 @@
 {{#if carrito.length }}
-    <button class="btn__enviarCarrito" onclick="carritoController.enviarCarrito()">Comprar</button>
+    <button class="btn__enviarCarrito" onclick="carritoController.enviarCarrito()">Enviar</button>
     <table class="section-carrito__table">
         <tr class="section-carrito__table__title">
             <th>Nombre</th>
@@ -28,7 +28,7 @@
             {{/if}}
             
             <td>
-                <button class="section-carrito__button" onclick="carritoController.borrarProductoCarrito({{id}})">borrar</button>
+                <button class="section-carrito__button" onclick="carritoController.borrarProductoCarrito('{{_id}}')">borrar</button>
             </td>
         </tr>
          {{/each}}
