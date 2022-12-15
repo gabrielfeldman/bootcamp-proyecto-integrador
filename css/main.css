@@ -712,10 +712,9 @@ body {
   padding: 1em;
 }
 .card__heading {
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-  margin-bottom: 0.5rem;
+  max-width: 100%;
+  margin-bottom: 0.75rem;
+  position: relative;
 }
 .card__heading::after {
   content: "";

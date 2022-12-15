@@ -63,8 +63,9 @@
     }
 
     &__heading {
-        max-width: fit-content;
-        margin-bottom: .5rem;
+        max-width: 100%;
+        margin-bottom: .75rem;
+        position: relative
     }
 
     &__heading::after {
