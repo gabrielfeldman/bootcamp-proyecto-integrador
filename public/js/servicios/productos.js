@@ -24,6 +24,7 @@ class ProductoService {
     
     
     async borrarProductosService(id) {
+        console.log(id)
         const productoBorrado = await http.del(this.URL_PRODUCTOS, id);
             //console.log(productoBorrado)
             return productoBorrado

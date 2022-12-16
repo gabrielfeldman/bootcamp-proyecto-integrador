@@ -28,6 +28,7 @@ async function renderTablaCarrito(carrito) {
 function closeBtnCarrito(elemSectionCarrito) {
     const btn = document.createElement('button');
     btn.classList.add('btn--close');
+    //btn.innerHTML =  `<img src="img/icons/rectangle-xmark-regular.svg" alt="Close">`
     btn.textContent =  `Cerrar carrito`
     elemSectionCarrito.appendChild(btn);
 
