@@ -15,7 +15,7 @@ Desarrollo de un marketplace.
 - Gestión de la **base de datos** (ejemplos cargados con *mockapi* y con el form de la página de alta).
 - Resideño del marketplace como una **SPA.**
 
-## 20/11 Entrega de la tercera etapa | Final: 
+## 20/12 Entrega de la tercera etapa | Final: 
 
 - Integración con **base de datos Mongo** para el backend.
 - Gestión de pagos con API de **Mercado Libre.**
