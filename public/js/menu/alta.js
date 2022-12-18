@@ -213,6 +213,31 @@ class FormularioAlta {
 
 }
 
+// Muestro tabla
+const ShowTablaBtn = () => {
+    let showBtn = document.querySelector('.show-products__btn');
+    let tabla = document.querySelector('#listado-productos');
+
+    showBtn.addEventListener('click', e => {
+        tabla.classList.toggle('hide-list-products')
+        if(!showBtn.classList.contains('show-products__btn--open')) {
+            showBtn.classList.add('show-products__btn--open');
+            showBtn.classList.remove('show-products__btn--close');
+            showBtn.textContent="Ver listado de productos"
+            showBtn.title="Ver listado de productos"
+
+        } else {
+            showBtn.classList.add('show-products__btn--close');
+            showBtn.classList.remove('show-products__btn--open');
+            showBtn.textContent="Ocultar listado de productos"
+            showBtn.title="Ocultar listado de productos"
+
+        }
+        
+    })
+}
+
+
 
 // Rendereo la plantilla   
 const renderTablaAlta = (validos, productos) => {
@@ -246,7 +271,8 @@ async function initAlta() {
     formularioAlta = new FormularioAlta(renderTablaAlta, productoController.guardarProducto);    
     
     const productos = await productoController.obtenerProductos();
-    renderTablaAlta(null, productos)
+    renderTablaAlta(null, productos);
+    ShowTablaBtn()
 
 }
 

@@ -67,6 +67,46 @@
         }
 
     }
+
+    .show-products {
+        max-width: 450px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .show-products__btn {
+        font-size: .5rem;
+        width: 30px;
+        aspect-ratio: 1/1;
+        text-indent: -9999px; 
+
+        border-radius: 50%;
+
+        &--open{
+            background: url(/img/icons/eye.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: $tercerary-clr;
+            background-size: 75%;
+        }
+        
+        &--close {
+            background: url(/img/icons/eye-slash.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: $tercerary-clr;
+            background-size: 75%;
+        }
+    }
+
+
+
+    .hide-list-products {
+        display: none;
+    }
+    
     
     /************************/
     /*      DROP AREA       */
@@ -87,6 +127,7 @@
         cursor: pointer;
         border-radius: 5px;
         border: 1px solid #ccc;
+        margin-block: 8px;
     }
 
     #foto {
