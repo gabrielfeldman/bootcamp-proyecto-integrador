@@ -973,7 +973,7 @@ body {
   background-size: 75%;
 }
 .container-alta .hide-list-products {
-  display: none;
+  visibility: hidden;
 }
 .container-alta #drop-area {
   border: 2px dashed #777;
